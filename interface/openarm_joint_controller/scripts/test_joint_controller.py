@@ -230,6 +230,28 @@ def main(args=None):
                     0.11692225528343592,
                 ],
             )
+        elif choice == "9":
+            # 右臂测试位置2
+            node.send_joint_goal(
+                joint_names=[
+                    "openarm_right_joint1",
+                    "openarm_right_joint2",
+                    "openarm_right_joint3",
+                    "openarm_right_joint4",
+                    "openarm_right_joint5",
+                    "openarm_right_joint6",
+                    "openarm_right_joint7",
+                ],
+                joint_positions=[
+                    0.34618905928129884,
+                    -0.03316929884794373,
+                    -1.1823834592202633,
+                    0.5159456778820495,
+                    0.028801403830014394,
+                    0.31757839322499315,
+                    1.3097962920576798,
+                ],
+            )
         elif choice == "5":
             # 左夹爪打开
             print("打开左夹爪...")
