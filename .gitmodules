@@ -1,3 +1,9 @@
 [submodule "openarm_ros2"]
 	path = openarm_ros2
 	url = git@github.com:midiexiangxxx/openarm_ros2.git
+[submodule "openarm_teleop"]
+	path = openarm_teleop
+	url = git@github.com:midiexiangxxx/openarm_teleop.git
+[submodule "openarm_description"]
+	path = openarm_description
+	url = git@github.com:enactic/openarm_description.git
