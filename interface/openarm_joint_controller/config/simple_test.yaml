@@ -1,0 +1,185 @@
+# OpenArm 动作序列配置文件
+# 定义一系列机械臂和夹爪的动作，按顺序执行
+
+# 动作序列
+actions:
+
+
+  # 动作 3: 打开左夹爪
+  - type: gripper
+    name: "打开左夹爪"
+    arm: left # left 或 right
+    position: 0.044 # 夹爪位置 (0.0-0.044)
+    wait_time: 1.0
+
+  # 动作 4: 打开右夹爪
+  - type: gripper
+    name: "打开右夹爪"
+    arm: right
+    position: 0.044
+    wait_time: 1.0
+#   # 动作 1: 左臂test1
+  - type: arm # 动作类型: arm 或 gripper
+    name: "左臂test1" # 动作名称（用于日志显示）
+    arm: left # 机械臂: left 或 right
+    joints:
+      - openarm_left_joint1
+      - openarm_left_joint2
+      - openarm_left_joint3
+      - openarm_left_joint4
+      - openarm_left_joint5
+      - openarm_left_joint6
+      - openarm_left_joint7
+    positions:
+      [
+        -0.07419699397268609,
+        -1.4459830624856949,
+        0.13179980163271487,
+        0.07000076295109459,
+        -0.2172503242542163,
+        -0.006294346532387252,
+        -0.21572442206454667,
+      ]
+    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  # 动作 2: 右臂test1
+  - type: arm
+    name: "右臂test1"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+        -0.24929427023727868,
+        1.3555733577477689,
+        1.2659266041046777,
+        0.35992217898832557,
+        -0.3953994048981464,
+        0.10013733119706991,
+        -0.15201800564583756
+      ]
+    wait_time: 2.5
+  
+  - type: gripper
+    name: "关闭右夹爪"
+    arm: right
+    position: 0.0
+    wait_time: 1.0
+
+# 
+  # - type: arm
+    # name: "右臂test1"
+  #   arm: right
+  #   joints:
+  #     - openarm_right_joint1
+  #     - openarm_right_joint2
+  #     - openarm_right_joint3
+  #     - openarm_right_joint4
+  #     - openarm_right_joint5
+  #     - openarm_right_joint6
+  #     - openarm_right_joint7
+  #   positions:
+  #     [
+  #       -0.24929427023727868,
+  #       1.3555733577477689,
+  #       1.2659266041046777,
+  #       0.35992217898832557,
+  #       -0.3953994048981464,
+  #       0.10013733119706991,
+  #       -0.15201800564583756
+  #     ]
+  #   wait_time: 2.0
+  # 动作 3: 打开左夹爪
+  # - type: gripper
+  #   name: "打开左夹爪"
+  #   arm: left # left 或 right
+  #   position: 0.044 # 夹爪位置 (0.0-0.044)
+  #   max_effort: 20.0 # 最大力度（可选，默认20.0）
+  #   wait_time: 1.0
+
+  # 动作 4: 打开右夹爪
+  # - type: gripper
+  #   name: "打开右夹爪"
+  #   arm: right
+  #   position: 0.044
+  #   wait_time: 1.0
+
+  # 动作 5: 左臂移动到测试位置1
+  # - type: arm
+  #   name: "左臂测试位置1"
+  #   arm: left
+  #   joints:
+  #     - openarm_left_joint1
+  #     - openarm_left_joint2
+  #     - openarm_left_joint3
+  #     - openarm_left_joint4
+  #     - openarm_left_joint5
+  #     - openarm_left_joint6
+  #     - openarm_left_joint7
+  #   positions: [-0.359, -0.120, -0.152, 1.286, 0.125, -0.073, -0.318]
+  #   wait_time: 3.0
+
+  # 动作 6: 右臂移动到测试位置1
+  # - type: arm
+  #   name: "右臂测试位置1"
+  #   arm: right
+  #   joints:
+  #     - openarm_right_joint1
+  #     - openarm_right_joint2
+  #     - openarm_right_joint3
+  #     - openarm_right_joint4
+  #     - openarm_right_joint5
+  #     - openarm_right_joint6
+  #     - openarm_right_joint7
+  #   positions: [0.438, 0.002, 0.015, 1.396, 0.030, 0.041, 0.117]
+  #   wait_time: 3.0
+
+  # 动作 7: 关闭左夹爪
+  # - type: gripper
+  #   name: "关闭左夹爪"
+  #   arm: left
+  #   position: 0.0
+  #   wait_time: 1.0
+
+  # # 动作 8: 关闭右夹爪
+  # - type: gripper
+  #   name: "关闭右夹爪"
+  #   arm: right
+  #   position: 0.0
+  #   wait_time: 1.0
+
+  # 动作 9: 左臂回零
+  - type: arm
+    name: "左臂回到零位"
+    arm: left
+    joints:
+      - openarm_left_joint1
+      - openarm_left_joint2
+      - openarm_left_joint3
+      - openarm_left_joint4
+      - openarm_left_joint5
+      - openarm_left_joint6
+      - openarm_left_joint7
+    positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    wait_time: 2.0
+
+  # 动作 10: 右臂回零
+  - type: arm
+    name: "右臂回到零位"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    wait_time: 2.0
