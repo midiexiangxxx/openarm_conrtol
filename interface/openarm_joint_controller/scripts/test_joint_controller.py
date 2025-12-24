@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-"""
-示例脚本：发送关节目标到 joint_state_controller，并控制夹爪
-"""
 
 import rclpy
 from rclpy.node import Node
@@ -61,7 +58,7 @@ class JointGoalPublisher(Node):
         publisher.publish(msg)
         self.get_logger().info("Joint goal published!")
 
-    def control_gripper(self, gripper_name, position, max_effort=0.10):
+    def control_gripper(self, gripper_name, position, max_effort=30.1):
         """
         控制夹爪移动到指定位置
 
