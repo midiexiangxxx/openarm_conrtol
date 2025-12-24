@@ -24,3 +24,10 @@ ros2 launch openarm_bimanual_moveit_config demo.launch.py
 ```
 ros2 launch openarm_bringup openarm.bimanual.read_only.launch.py
 ```
+
+### run sequence plan
+```
+ros2 launch openarm_bimanual_moveit_config demo.launch.py
+./interface/openarm_joint_controller/scripts/launch_both_controllers.sh
+cd interface/openarm_joint_controller/scripts && ./run_actions.py ../config/simple_test.yaml
+```
