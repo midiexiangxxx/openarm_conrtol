@@ -31,3 +31,10 @@ ros2 launch openarm_bimanual_moveit_config demo.launch.py
 ./interface/openarm_joint_controller/scripts/launch_both_controllers.sh
 cd interface/openarm_joint_controller/scripts && ./run_actions.py ../config/simple_test.yaml
 ```
+
+
+1. source ~/huadian/openarm_conrtol/install/setup.zsh
+2. ros2 launch openarm_bimanual_moveit_config demo.launch.py 
+3. cd ./home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && ./launch_both_controllers.sh
+4. cd ./home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && python3 run_actions.py ../config/dual_heatgun.yaml
+Then **Push Enter** to Run
