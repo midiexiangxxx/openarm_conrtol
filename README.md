@@ -39,8 +39,8 @@ cd interface/openarm_joint_controller/scripts && ./run_actions.py ../config/simp
 ```
 
 
-1. openarm-can-configure-socketcan can0 -fd -b 1000000 -d 5000000e
-2. openarm-can-configure-socketcan can1 -fd -b 1000000 -d 5000000e
+1. openarm-can-configure-socketcan can0 -fd -b 1000000 -d 5000000
+2. openarm-can-configure-socketcan can1 -fd -b 1000000 -d 5000000
 3. source ~/huadian/openarm_conrtol/install/setup.zsh
 4. ros2 launch openarm_bimanual_moveit_config demo.launch.py 
 5. cd ./home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && ./launch_both_controllers.sh
