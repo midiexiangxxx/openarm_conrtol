@@ -137,7 +137,7 @@ actions:
           -0.304608224612803,
           0.23365377279316313,
       ]
-    wait_time: 40
+    wait_time: 45
 
   - type: arm # 动作类型: arm 或 gripper
     name: "左臂put_gun_before" # 动作名称（用于日志显示）

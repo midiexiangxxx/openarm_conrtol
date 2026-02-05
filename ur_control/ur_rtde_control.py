@@ -52,16 +52,19 @@ def main():
         position_close + [joint_q_speed, acceleration, 0.0],  # 最后一个点blend=0，完全停止
     ]
 
+    time.sleep(17.0) # 等17秒，openarm到达芯片位置
+
     print("Moving smoothly from position_init to position_close...")
     rtde_c.moveJ(path_smooth)
+   
 
     print("Moving to position_reach (slow speed)...")
     rtde_c.moveJ(position_reach, joint_q_speed_slow, acceleration)  # 慢速移动
-    time.sleep(10.0)
+    time.sleep(35.0)
 
     print("Moving to position_up...")
     rtde_c.moveJ(position_up, joint_q_speed, acceleration)
-    time.sleep(0.1)
+    time.sleep(6)
 
     print("Moving to position_up_box...")
     rtde_c.moveJ(position_up_box, joint_q_speed, acceleration)
