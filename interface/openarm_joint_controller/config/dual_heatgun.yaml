@@ -21,7 +21,54 @@ actions:
         0.22182803082322344,
         0.032616159304188486,
       ]
-    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+    wait_time: 0.5 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm
+    name: "右臂lift_to_side"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+          0.005149919890135024,
+          1.4269092851148244,
+          -0.0001907377737087046,
+          0.10128175783932214,
+          -0.032997634851605895,
+          -0.10433356221866141,
+          0.052071412222476354,
+      ]
+    wait_time: 0.5
+
+  - type: arm
+    name: "右臂put_gun_before"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+        1.1408026245517657,
+        0.6948577096208144,
+        1.053444724193179,
+        0.4629205767910296,
+        0.2790493629358348,
+        0.011253528648813571,
+        0.0829709315632865
+      ]
+    wait_time: 0.5
+
 
   - type: arm
     name: "右臂lift_to_side"
@@ -60,15 +107,61 @@ actions:
       - openarm_left_joint7
     positions:
       [
-          -0.778400854505227,
-          -0.6372549019607856,
-          1.4524681467917908,
-          0.0036240177004653873,
-          -0.20923933775845072,
-          0.4537651636530118,
-          -0.33436331731136093,
+            -0.9222171358815903,
+            -0.7257572289616245,
+            -0.18444342717631734,
+            -0.007820248722056888,
+            -1.634431982909895,
+            -0.7818341344319837,
+            0.2645532921339733,
       ]
-    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+    wait_time: 0.5 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm # 动作类型: arm 或 gripper
+    name: "左臂put_gun_close" # 动作名称（用于日志显示）
+    arm: left # 机械臂: left 或 right
+    joints:
+      - openarm_left_joint1
+      - openarm_left_joint2
+      - openarm_left_joint3
+      - openarm_left_joint4
+      - openarm_left_joint5
+      - openarm_left_joint6
+      - openarm_left_joint7
+    positions:
+      [
+         0.1497291523613331,
+         -0.4827573052567331,
+         0.5170901045243017,
+         1.703479056992446,
+         -1.1263065537499042,
+         -0.2874418249790196,
+         -1.1171511406118864,
+      ]
+    wait_time: 1.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm
+    name: "右臂put_gun_close"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+          -0.042534523537041125,
+          0.39349202716106113,
+          -0.04329747463187594,
+          1.2815671015487915,
+          0.6502250705729775,
+          0.78679331654841,
+          0.8104448004882894,
+      ]
+    wait_time: 1.0
 
   - type: arm # 动作类型: arm 或 gripper
     name: "左臂put_gun" # 动作名称（用于日志显示）
@@ -83,15 +176,85 @@ actions:
       - openarm_left_joint7
     positions:
       [
-          -0.8478294041351955,
-          -0.14324406805523715,
-          0.9599832150759138,
-          0.003242542153047978,
-          1.1411841000991831,
-          0.4575799191271859,
-          0.18902113374532625,
+          -0.1581216144045161,
+          0.08831158922713023,
+          0.11310749980926182,
+          0.8283741512169076,
+          -0.546082246128023,
+          -0.6769283588921962,
+          -1.1194399938963908,
       ]
-    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+    wait_time: 1.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm
+    name: "右臂put_gun"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+          0.11539635309376628,
+          -0.03032730601968403,
+          -0.07114518959334681,
+          1.2243457694361801,
+          0.44880598153658546,
+          0.47817959868772597,
+          0.5189974822613888,
+      ]
+    wait_time: 40.0
+
+  - type: arm # 动作类型: arm 或 gripper
+    name: "左臂put_gun_close" # 动作名称（用于日志显示）
+    arm: left # 机械臂: left 或 right
+    joints:
+      - openarm_left_joint1
+      - openarm_left_joint2
+      - openarm_left_joint3
+      - openarm_left_joint4
+      - openarm_left_joint5
+      - openarm_left_joint6
+      - openarm_left_joint7
+    positions:
+      [
+         0.1497291523613331,
+         -0.4827573052567331,
+         0.5170901045243017,
+         1.703479056992446,
+         -1.1263065537499042,
+         -0.2874418249790196,
+         -1.1171511406118864,
+      ]
+    wait_time: 1.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm
+    name: "右臂put_gun_close"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+          -0.042534523537041125,
+          0.39349202716106113,
+          -0.04329747463187594,
+          1.2815671015487915,
+          0.6502250705729775,
+          0.78679331654841,
+          0.8104448004882894,
+      ]
+    wait_time: 1.0
+
   - type: arm # 动作类型: arm 或 gripper
     name: "左臂put_gun_before" # 动作名称（用于日志显示）
     arm: left # 机械臂: left 或 right
@@ -105,16 +268,38 @@ actions:
       - openarm_left_joint7
     positions:
       [
-          -0.778400854505227,
-          -0.6372549019607856,
-          1.4524681467917908,
-          0.0036240177004653873,
-          -0.20923933775845072,
-          0.4537651636530118,
-          -0.33436331731136093,
+            -0.9222171358815903,
+            -0.7257572289616245,
+            -0.18444342717631734,
+            -0.007820248722056888,
+            -1.634431982909895,
+            -0.7818341344319837,
+            0.2645532921339733,
       ]
-    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+    wait_time: 0.5 # 等待时间（秒），完成后等待多久再执行下一个动作
 
+  - type: arm
+    name: "右臂put_gun_before"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+        1.1408026245517657,
+        0.6948577096208144,
+        1.053444724193179,
+        0.4629205767910296,
+        0.2790493629358348,
+        0.011253528648813571,
+        0.0829709315632865
+      ]
+    wait_time: 0.5
 
   - type: arm # 动作类型: arm 或 gripper
     name: "左臂lift_to_side" # 动作名称（用于日志显示）
@@ -137,7 +322,32 @@ actions:
         0.22182803082322344,
         0.032616159304188486,
       ]
-    wait_time: 2.0 # 等待时间（秒），完成后等待多久再执行下一个动作
+    wait_time: 0.5 # 等待时间（秒），完成后等待多久再执行下一个动作
+
+  - type: arm
+    name: "右臂lift_to_side"
+    arm: right
+    joints:
+      - openarm_right_joint1
+      - openarm_right_joint2
+      - openarm_right_joint3
+      - openarm_right_joint4
+      - openarm_right_joint5
+      - openarm_right_joint6
+      - openarm_right_joint7
+    positions:
+      [
+          0.005149919890135024,
+          1.4269092851148244,
+          -0.0001907377737087046,
+          0.10128175783932214,
+          -0.032997634851605895,
+          -0.10433356221866141,
+          0.052071412222476354,
+      ]
+    wait_time: 0.5
+
+
   - type: arm
     name: "左臂回到零位"
     arm: left
@@ -150,7 +360,7 @@ actions:
       - openarm_left_joint6
       - openarm_left_joint7
     positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    wait_time: 2.0
+    wait_time: 0.5
 
   - type: arm
     name: "右臂回到零位"
@@ -164,4 +374,4 @@ actions:
       - openarm_right_joint6
       - openarm_right_joint7
     positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    wait_time: 2.0
+    wait_time: 0.5

@@ -43,8 +43,8 @@ cd interface/openarm_joint_controller/scripts && ./run_actions.py ../config/simp
 2. openarm-can-configure-socketcan can1 -fd -b 1000000 -d 5000000
 3. source ~/huadian/openarm_conrtol/install/setup.zsh
 4. ros2 launch openarm_bimanual_moveit_config demo.launch.py 
-5. cd ./home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && ./launch_both_controllers.sh
-6. cd ./home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && python3 run_actions.py ../config/dual_heatgun.yaml
+5. cd /home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && ./launch_both_controllers.sh
+6. cd /home/ubuntu/huadian/openarm_conrtol/interface/openarm_joint_controller/scripts/ && python3 run_actions.py ../config/dual_heatgun.yaml
 Then **Push Enter** to Run
 
 
@@ -75,3 +75,6 @@ ros2 launch openarm_bimanual_moveit_config demo.launch.py
 run_actions.py会根据你的yaml配置里的程序来从上到下按顺序运行，只改yaml文件即可。见我写的yaml示例即可。
 调试一个新的动作时，若不确定，应先将openarm移到空旷的位置进行运行。
 
+## 同时运行ur10机械臂
+1. 运行 python ur_control/ur_rtde_control.py 执行ur10e的固定运动轨迹
+2. 在运行openarm时需要在终端 export ROS_LOCALHOST_ONLY=1,防止ur和openarm通信起冲突
